@@ -1,0 +1,10 @@
+terraform {
+  backend "s3" {
+    bucket         = "dummy-terraform-state-bucket"
+    key            = "dummy-path/terraform.tfstate"
+    region         = "dummy-region"
+    encrypt        = true
+    dynamodb_table = "dummy-terraform-state-lock"
+  }
+}
+
